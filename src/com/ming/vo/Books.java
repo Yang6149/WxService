@@ -28,6 +28,11 @@ public class Books {
     private String BookSortSecond;
     private String BookSortThird;
 
+    private int BookState1;
+    private int BookState2;
+    private int BookState3;
+    private int BookState4;
+
     public static class Builder{
         private String BookID;
         private String BookName;
@@ -48,6 +53,11 @@ public class Books {
         private int BookCount;
         private String BookSortSecond;
         private String BookSortThird;
+
+        private int BookState1;
+        private int BookState2;
+        private int BookState3;
+        private int BookState4;
 
         public Builder BookID(String BookID){
             this.BookID=BookID;
@@ -123,7 +133,21 @@ public class Books {
             this.BookSortThird=BookSortThird;
             return this;
         }
-        
+
+        public Builder BookState1(int  BookState1){
+            this.BookState1=BookState1;
+            return this;
+        }public Builder BookState2(int  BookState2){
+            this.BookState2=BookState2;
+            return this;
+        }public Builder BookState3(int  BookState3){
+            this.BookState3=BookState3;
+            return this;
+        }public Builder BookState4(int  BookState4){
+            this.BookState4=BookState4;
+            return this;
+        }
+
 
 
 
@@ -147,10 +171,21 @@ public class Books {
 
         BookAuthor=builder.BookAuthor;
         BookPress=builder.BookPress;
+        BookEdition=builder.BookEdition;
+        BookPtime=builder.BookPtime;
+        BookNprice=builder.BookNprice;
+        BookCount=builder.BookCount;
+        BookSortSecond=builder.BookSortSecond;
+        BookSortThird=builder.BookSortThird;
+
+        BookState1=builder.BookState1;
+        BookState2=builder.BookState2;
+        BookState3=builder.BookState3;
+        BookState4=builder.BookState4;
     }
 
 
-    }
+}
     /*
     public static void main(String[] args) {
         Books a =new Builder().BookImage("image").BookRemarks("discription").BookName("name").BookID("num").UserID("UserID").BookSortFirst("type").BookOprice("price").BookUpTime(new Date())
@@ -160,4 +195,4 @@ public class Books {
      */
 
 
-}
+
