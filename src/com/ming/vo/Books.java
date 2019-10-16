@@ -17,7 +17,7 @@ public class Books {
     private String BookRemarks;
     private double BookOprice;
     private Date BookUpTime;
-    private boolean BookIsSelled;
+    private String BookIsSelled;
 
     private String BookAuthor;
     private String BookPress;
@@ -43,7 +43,7 @@ public class Books {
         private String BookRemarks;
         private double BookOprice;
         private Date BookUpTime;
-        private boolean BookIsSelled;
+        private String BookIsSelled;
 
         private String BookAuthor;
         private String BookPress;
@@ -95,7 +95,7 @@ public class Books {
             this.BookUpTime=BookUpTime;
             return this;
         }
-        public Builder BookIsSelled(boolean BookIsSelled){
+        public Builder BookIsSelled(String BookIsSelled){
             this.BookIsSelled=BookIsSelled;
             return this;
         }
@@ -157,6 +157,96 @@ public class Books {
             return new Books(this);
         }
     }
+
+    public String getBookID() {
+        return BookID;
+    }
+
+    public String getBookName() {
+        return BookName;
+    }
+
+    public String getUserID() {
+        return UserID;
+    }
+
+    public String getBookISBN() {
+        return BookISBN;
+    }
+
+    public String getBookImage() {
+        return BookImage;
+    }
+
+    public String getBookSortFirst() {
+        return BookSortFirst;
+    }
+
+    public String getBookRemarks() {
+        return BookRemarks;
+    }
+
+    public double getBookOprice() {
+        return BookOprice;
+    }
+
+    public Date getBookUpTime() {
+        return BookUpTime;
+    }
+
+    public String getBookIsSelled() {
+        return BookIsSelled;
+    }
+
+    public String getBookAuthor() {
+        return BookAuthor;
+    }
+
+    public String getBookPress() {
+        return BookPress;
+    }
+
+    public String getBookEdition() {
+        return BookEdition;
+    }
+
+    public Date getBookPtime() {
+        return BookPtime;
+    }
+
+    public int getBookNprice() {
+        return BookNprice;
+    }
+
+    public int getBookCount() {
+        return BookCount;
+    }
+
+    public String getBookSortSecond() {
+        return BookSortSecond;
+    }
+
+    public String getBookSortThird() {
+        return BookSortThird;
+    }
+
+    public int getBookState1() {
+        return BookState1;
+    }
+
+    public int getBookState2() {
+        return BookState2;
+    }
+
+    public int getBookState3() {
+        return BookState3;
+    }
+
+    public int getBookState4() {
+        return BookState4;
+    }
+
+
     private Books(Builder builder){
         BookID=builder.BookID;
         BookName=builder.BookName;
