@@ -19,7 +19,10 @@ public class BooksDaoProxy implements BooksDao {
     @Override
     public boolean doCreate(Books B) throws Exception {
         boolean flag=false;
-        if(this.dao.findByid(Integer.parseInt(B.getBookID()))==null);
+        if(this.dao.findByid(Integer.parseInt(B.getBookID()))==null){
+            this.dao.doCreate(B);
+            return true;
+        }
         return false;
     }
 

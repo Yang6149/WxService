@@ -11,27 +11,27 @@ public class Books {
     private String BookID;
     private String BookName;
     private String UserID;
-    private String BookISBN;
-    private String BookImage;
-    private String BookSortFirst;
-    private String BookRemarks;
-    private double BookOprice;
+    private String BookISBN="";
+    private String BookImage="";
+    private String BookSortFirst="";
+    private String BookRemarks="";
+    private double BookOprice=0;
     private Date BookUpTime;
     private String BookIsSelled;
 
-    private String BookAuthor;
-    private String BookPress;
-    private String BookEdition;
+    private String BookAuthor="";
+    private String BookPress="";
+    private String BookEdition="";
     private Date BookPtime;
-    private int BookNprice;
-    private int BookCount;
+    private int BookNprice=0;
+    private int BookCount=0;
     private String BookSortSecond;
     private String BookSortThird;
 
-    private int BookState1;
-    private int BookState2;
-    private int BookState3;
-    private int BookState4;
+    private int BookState1=0;
+    private int BookState2=0;
+    private int BookState3=0;
+    private int BookState4=0;
 
     public static class Builder{
         private String BookID;
@@ -153,7 +153,7 @@ public class Books {
 
 
 
-        private Books build(){
+        public Books build(){
             return new Books(this);
         }
     }
