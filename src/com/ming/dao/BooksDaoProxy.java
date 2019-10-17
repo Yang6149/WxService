@@ -7,13 +7,12 @@ import com.ming.vo.Books;
 import java.util.List;
 
 public class BooksDaoProxy implements BooksDao {
-    private DataBaseConnection dataBaseConnection = null;
+    private DataBaseConnection conn = null;
     private BooksDao dao = null;
 
     public BooksDaoProxy() throws Exception {
-        dataBaseConnection = DatabaseConnectionFactory.getDataBaseConnection();
-
-        this.dao = new BooksDaoImpl(dataBaseConnection.getConnection());
+        conn = DatabaseConnectionFactory.getDataBaseConnection();
+        this.dao = new BooksDaoImpl(conn.getConnection());
     }
 
     @Override
@@ -33,6 +32,7 @@ public class BooksDaoProxy implements BooksDao {
 
     @Override
     public Books findByid(int num) throws Exception {
-        return null;
+
+        return dao.findByid(num);
     }
 }

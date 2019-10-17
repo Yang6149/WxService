@@ -11,22 +11,22 @@ public class Books {
     private String BookID;
     private String BookName;
     private String UserID;
-    private String BookISBN="";
+    private String BookISBN;
     private String BookImage="";
     private String BookSortFirst="";
     private String BookRemarks="";
     private double BookOprice=0;
-    private Date BookUpTime;
-    private String BookIsSelled;
+    private Date BookUpTime=new Date();
+    private String BookIsSelled="";
 
     private String BookAuthor="";
     private String BookPress="";
     private String BookEdition="";
-    private Date BookPtime;
+    private Date BookPtime=new Date();
     private int BookNprice=0;
     private int BookCount=0;
-    private String BookSortSecond;
-    private String BookSortThird;
+    private String BookSortSecond="";
+    private String BookSortThird="";
 
     private int BookState1=0;
     private int BookState2=0;
@@ -34,30 +34,30 @@ public class Books {
     private int BookState4=0;
 
     public static class Builder{
-        private String BookID;
-        private String BookName;
-        private String UserID;
-        private String BookISBN;
-        private String BookImage;
-        private String BookSortFirst;
-        private String BookRemarks;
-        private double BookOprice;
-        private Date BookUpTime;
-        private String BookIsSelled;
+        private String BookID="123";
+        private String BookName="123";
+        private String UserID="123";
+        private String BookISBN="";
+        private String BookImage="";
+        private String BookSortFirst="";
+        private String BookRemarks="";
+        private double BookOprice=0;
+        private Date BookUpTime=new Date();
+        private String BookIsSelled="";
 
-        private String BookAuthor;
-        private String BookPress;
-        private String BookEdition;
-        private Date BookPtime;
-        private int BookNprice;
-        private int BookCount;
-        private String BookSortSecond;
-        private String BookSortThird;
+        private String BookAuthor="";
+        private String BookPress="";
+        private String BookEdition="";
+        private Date BookPtime=new Date();
+        private int BookNprice=0;
+        private int BookCount=0;
+        private String BookSortSecond="";
+        private String BookSortThird="";
 
-        private int BookState1;
-        private int BookState2;
-        private int BookState3;
-        private int BookState4;
+        private int BookState1=0;
+        private int BookState2=0;
+        private int BookState3=0;
+        private int BookState4=0;
 
         public Builder BookID(String BookID){
             this.BookID=BookID;
@@ -274,7 +274,33 @@ public class Books {
         BookState4=builder.BookState4;
     }
 
-
+    @Override
+    public String toString() {
+        return "Books{" +
+                "BookID='" + BookID + '\'' +
+                ", BookName='" + BookName + '\'' +
+                ", UserID='" + UserID + '\'' +
+                ", BookISBN='" + BookISBN + '\'' +
+                ", BookImage='" + BookImage + '\'' +
+                ", BookSortFirst='" + BookSortFirst + '\'' +
+                ", BookRemarks='" + BookRemarks + '\'' +
+                ", BookOprice=" + BookOprice +
+                ", BookUpTime=" + BookUpTime +
+                ", BookIsSelled='" + BookIsSelled + '\'' +
+                ", BookAuthor='" + BookAuthor + '\'' +
+                ", BookPress='" + BookPress + '\'' +
+                ", BookEdition='" + BookEdition + '\'' +
+                ", BookPtime=" + BookPtime +
+                ", BookNprice=" + BookNprice +
+                ", BookCount=" + BookCount +
+                ", BookSortSecond='" + BookSortSecond + '\'' +
+                ", BookSortThird='" + BookSortThird + '\'' +
+                ", BookState1=" + BookState1 +
+                ", BookState2=" + BookState2 +
+                ", BookState3=" + BookState3 +
+                ", BookState4=" + BookState4 +
+                '}';
+    }
 }
     /*
     public static void main(String[] args) {
