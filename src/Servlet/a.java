@@ -1,4 +1,5 @@
 package Servlet;
+import com.alibaba.fastjson.JSONObject;
 import com.ming.dao.BooksDao;
 import com.ming.dao.BooksDaoProxy;
 import com.ming.vo.Books;
@@ -36,14 +37,18 @@ public class a extends HttpServlet {
             e.printStackTrace();
         }
         Books b = new Books.Builder().build();
-        //System.out.println(b);
         //bookDao.doCreate(b);
         try {
             b=bookDao.findByid(123);
+            //out.println(b);
+            JSONObject jsonObject = (JSONObject) JSONObject.toJSON(b);
+            jsonObject.put("string","Object");
+            out.println(jsonObject);
+            System.out.println("finished");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        out.println(b);
+
         String str ="{\"name\":\"yangshen\",\"age\":\"20\",5:9}";
         out.println(str);
         out.flush();

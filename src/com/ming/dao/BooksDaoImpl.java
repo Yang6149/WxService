@@ -43,6 +43,7 @@ public class BooksDaoImpl implements BooksDao{
     @Override
     public Books findByid(int num) throws Exception {
         String sql = "SELECT * FROM book WHERE BOOK_ID='"+num+"'";
+        System.out.println(this.connection);
         this.preparedStatement = this.connection.prepareStatement(sql);
 
         ResultSet result = this.preparedStatement.executeQuery();

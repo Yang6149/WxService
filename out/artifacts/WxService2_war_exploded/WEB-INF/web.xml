@@ -8,17 +8,6 @@
         <servlet-name>HelloWorld</servlet-name>
         <servlet-class>Servlet.a</servlet-class>
 
-
-
-
-
-
-
-
-
-
-
-
     </servlet>
 
     <servlet-mapping>

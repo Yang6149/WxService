@@ -15,11 +15,13 @@ public class MysqlDatabaseConnection implements DataBaseConnection {
 
     @Override
     public Connection getConnection() {
+
         try {
             Class.forName(driverName);
             conn = DriverManager.getConnection(urlPre + databaseName + urlSuff, userName, password);
         } catch (Exception e) {
             e.getMessage();
+            e.printStackTrace();
         }
         return conn;
     }

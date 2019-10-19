@@ -1,7 +1,7 @@
 package com.ming.dao;
 
 import com.ming.vo.Books;
-import net.sf.json.JSONObject;
+import com.alibaba.fastjson.*;
 public class BooksDAOProxyTest {
     public static void main(String[] args) throws Exception {
         BooksDao bookDao = new BooksDaoProxy();
@@ -9,7 +9,8 @@ public class BooksDAOProxyTest {
         //System.out.println(b);
         //bookDao.doCreate(b);
         b=bookDao.findByid(123);
-        JSONObject jsonObject = JSON.toJSON(b);
+        JSONObject jsonObject = (JSONObject) JSON.toJSON(b);
+        System.out.println(jsonObject);
         //System.out.println(b);
         //bookDao.doCreate(Books b);
     }
