@@ -1,4 +1,8 @@
 package Servlet;
+import com.ming.dao.BooksDao;
+import com.ming.dao.BooksDaoProxy;
+import com.ming.vo.Books;
+
 import java.io.*;
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -25,6 +29,21 @@ public class a extends HttpServlet {
         // 实际的逻辑是在这里
 
         PrintWriter out = response.getWriter();
+        BooksDao bookDao = null;
+        try {
+            bookDao = new BooksDaoProxy();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        Books b = new Books.Builder().build();
+        //System.out.println(b);
+        //bookDao.doCreate(b);
+        try {
+            b=bookDao.findByid(123);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        out.println(b);
         String str ="{\"name\":\"yangshen\",\"age\":\"20\",5:9}";
         out.println(str);
         out.flush();
